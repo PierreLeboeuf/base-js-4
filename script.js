@@ -102,21 +102,19 @@ console.log(compterVoyelles(chaine));
 // // ------------------------------------------------
 // Exercice 6 - Filtrer les nombres pairs d'un tableau
 // // ------------------------------------------------
-const tableau = []
-const tableauOrigine = [1, 2, 3, 4, 5, 6]
+// const tableau = []
+// const tableauOrigine = [1, 2, 3, 4, 5, 6]
 
-function nombresPairs(tableau) {
-    let pairs;
-    for (let pairs of tableauOrigine) {
-        if (pairs % 2 === 0) {
-            tableau.push(pairs);
-        }
-    }
-    return pairs
-}
+// function nombresPairs(tableau) {
+//     for (let pairs of tableauOrigine) {
+//         if (pairs % 2 === 0) {
+//             tableau.push(pairs);
+//         }
+//     }
+// }
 
-console.log(nombresPairs(tableau));
-console.log(tableau);
+// nombresPairs(tableau, tableauOrigine);
+// console.log(tableau);
 
 
 // // ------------------------------------------------
@@ -158,16 +156,17 @@ let produits = [
 
 let nomProduits = [];
 
-// function extraireNoms(produits) {
-// }
-
-for (let produit of produits) {
-    console.log(`${produit.nom}`);
-
-    nomProduits.push(produit.nom);
-    console.log(nomProduits);
+function extraireNoms(produits) {
+    for (let produit of produits) {
+        if (produit.nom !== "") {
+            console.log(`${produit.nom}`);
+            nomProduits.push(produit.nom);
+        }
+    }
 }
 
+extraireNoms(produits, nomProduits);
+console.log(nomProduits);
 
 // // ------------------------------------------------
 // Exercice 9 : Calculer la factorielle d'un nombre
@@ -178,3 +177,25 @@ for (let produit of produits) {
 // // ------------------------------------------------
 // Exercice 10 : Vérifier si un tableau est trié en ordre croissant
 // // ------------------------------------------------
+
+
+let chiffres = [1, 2, 3, 4, 5, 6, 7, 8];
+
+function estTrie(chiffres) {
+    // Un tableau vide ou un tableau avec un seul élément est considéré comme trié
+    if (chiffres.length <= 1) {
+        return true;
+    }
+    // Itérer jusqu'à l'avant-dernier élément
+    for (let i = 0; i < chiffres.length - 1; i++) {
+        // Si l'élément actuel est supérieur à l'élément suivant, il n'est pas trié
+        if (chiffres[i] > chiffres[i + 1]) {
+            return false; // Paire non triée trouvée, donc on retourne false immédiatement
+        }
+    }
+
+    // Si la boucle se termine, cela signifie que toutes les paires étaient dans l'ordre croissant
+    return true;
+}
+
+console.log(estTrie(chiffres));
