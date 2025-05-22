@@ -1,11 +1,11 @@
 // // ------------------------------------------------
 // Exercice 1 - Afficher les éléments d'un tableau
 // // ------------------------------------------------
-const nombres = [1, 2, 3, 4, 5];
+// const nombres = [1, 2, 3, 4, 5];
 
-for (let chiffre of nombres) {
-    console.log(chiffre);
-}
+// for (let chiffre of nombres) {
+//     console.log(chiffre);
+// }
 // // ------------------------------------------------
 // Exercice 2 - Calculer la somme des éléments d'un tableau
 // // ------------------------------------------------
@@ -25,26 +25,26 @@ for (let chiffre of nombres) {
 // // ------------------------------------------------
 // Exercice 3 - Trouver le mot le plus long dans un tableau
 // // ------------------------------------------------
-const tableauMots = ["bonjour", "salut", "coucou"];
-let max = tableauMots[0];
+// const tableauMots = ["bonjour", "salut", "coucou"];
+// let max = tableauMots[0];
 
-function motPlusLong(tableauMots) {
-    for (let i = 1; i < tableauMots.length; i++) {
-        if (tableauMots[i].length > max.length) {
-            max = tableauMots[i];
+// function motPlusLong(tableauMots) {
+//     for (let i = 1; i < tableauMots.length; i++) {
+//         if (tableauMots[i].length > max.length) {
+//             max = tableauMots[i];
 
-        }
+//         }
 
-    }
-    return max;
-}
+//     }
+//     return max;
+// }
 
-console.log(motPlusLong(tableauMots));
+// console.log(motPlusLong(tableauMots));
 
 // // ------------------------------------------------
 // Exercice 4 - Inverser une chaine de caractères
 // // ------------------------------------------------
-// let chaine = "toto"
+// let chaine = "Bonjour"
 
 // function inverserChaine(chaine) {
 //     let motInverse = "";
@@ -71,7 +71,7 @@ console.log(motPlusLong(tableauMots));
 // // ------------------------------------------------
 // Exercice 5 - Compter le nombre de voyelles dans une chaine
 // // ------------------------------------------------
-let chaine = "bonjour";
+// let chaine = "bonjour";
 // Méthode avec for simple
 // function compterVoyelles(chaine){
 //     let nbVoyelles = 0 ;
@@ -86,18 +86,18 @@ let chaine = "bonjour";
 
 // Méthode avec boucle dans un tableau
 
-function compterVoyelles(chaine) {
-    let nbVoyelles = 0;
-    let voyelles = ['a', 'e', 'i', 'o', 'u', 'y'];
-    for (let lettre of chaine) {
-        if (voyelles.includes(lettre)) { // si une voyelle du tableau est inclus dans le mot alors incrémenter nbVoyelles
-            nbVoyelles++;
-        }
-    }
-    return nbVoyelles
-}
+// function compterVoyelles(chaine) {
+//     let nbVoyelles = 0;
+//     let voyelles = ['a', 'e', 'i', 'o', 'u', 'y'];
+//     for (let lettre of chaine) {
+//         if (voyelles.includes(lettre)) { // si une voyelle du tableau est inclus dans le mot alors incrémenter nbVoyelles
+//             nbVoyelles++;
+//         }
+//     }
+//     return nbVoyelles
+// }
 
-console.log(compterVoyelles(chaine));
+// console.log(compterVoyelles(chaine));
 
 // // ------------------------------------------------
 // Exercice 6 - Filtrer les nombres pairs d'un tableau
@@ -120,16 +120,15 @@ console.log(compterVoyelles(chaine));
 // // ------------------------------------------------
 // Exercice 7 - Compter les propriétés d'un objet
 // // ------------------------------------------------
-const objet = {
-    prenom: "Luc",
-    age: 30,
-    profession: "developpeur"
-};
-// avec une boucle
+// const objet = {
+//     prenom: "Luc",
+//     age: 30,
+//     profession: "developpeur"
+// };
+// // avec une boucle
 // function compterProprietes(objet) {
 //     let nbObjet = 0;
 //     for (let clé in objet) {
-//         if (objet.hasOwnProperty(clé))
 //             nbObjet++;
 //     }
 //     return nbObjet;
@@ -139,34 +138,32 @@ const objet = {
 
 // avec fonction javascrip
 
-function compterProprietes(objet) {
-    return Object.keys(objet).length;
-}
-console.log(compterProprietes(objet));
+// function compterProprietes(objet) {
+//     return Object.keys(objet).length;
+// }
+// console.log(compterProprietes(objet));
 
 // // ------------------------------------------------
 // Exercice 8 : Convertir un tableau d'objets en un tableau de valeurs
 // // ------------------------------------------------
 
-let produits = [
-    { nom: "Stylo", prix: 2 },
-    { nom: "Cahier", prix: 5 },
-    { nom: "Gomme", prix: 1 }
-];
+// let produits = [
+//     { nom: "Stylo", prix: 2 },
+//     { nom: "Cahier", prix: 5 },
+//     { nom: "Gomme", prix: 1 }
+// ];
 
-let nomProduits = [];
+// let nomProduits = [];
 
-function extraireNoms(produits) {
-    for (let produit of produits) {
-        if (produit.nom !== "") {
-            console.log(`${produit.nom}`);
-            nomProduits.push(produit.nom);
-        }
-    }
-}
+// function extraireNoms(produits) {
+//     for (let produit of produits) {
+//             nomProduits.push(produit.nom);
+//         }
+//     }
+// }
 
-extraireNoms(produits, nomProduits);
-console.log(nomProduits);
+// extraireNoms(produits, nomProduits);
+// console.log(nomProduits);
 
 // // ------------------------------------------------
 // Exercice 9 : Calculer la factorielle d'un nombre
@@ -177,16 +174,13 @@ let result = 1;
 // faire le produit du chiffre n, ex : 1*2*3*4* (si n = 4)
 function factorielle(n) {
     for (let i = 1; i <= n; i++) {
-
-        result = i * result;
-       
-
+        // result = i * result;
+       result *= i;
     } 
     return result;
 }
 
 console.log(factorielle(n));
-
 
 
 // // ------------------------------------------------
