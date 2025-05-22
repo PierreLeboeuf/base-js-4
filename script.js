@@ -172,6 +172,21 @@ console.log(nomProduits);
 // Exercice 9 : Calculer la factorielle d'un nombre
 // // ------------------------------------------------
 
+let n = 5;
+let result = 1;
+// faire le produit du chiffre n, ex : 1*2*3*4* (si n = 4)
+function factorielle(n) {
+    for (let i = 1; i <= n; i++) {
+
+        result = i * result;
+       
+
+    } 
+    return result;
+}
+
+console.log(factorielle(n));
+
 
 
 // // ------------------------------------------------
